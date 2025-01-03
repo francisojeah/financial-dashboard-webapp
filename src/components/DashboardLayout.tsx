@@ -15,9 +15,9 @@ const DashboardLayout = ({ children }: LayoutProps) => {
       >
         <SideMenu />
       </div>
-      <div className="flex flex-col w-full lg:w-[calc(100%-15.625rem)] min-h-screen bg-white md:bg-custom-primary-3 overflow-x-auto ml-0 lg:ml-[15.625rem] mb-10">
+      <div className="flex flex-col w-full lg:w-[calc(100%-15.625rem)] min-h-screen bg-white md:bg-custom-primary-3 overflow-x-auto ml-0 lg:ml-[15.625rem] pb-8">
         <AuthNavBar />
-        <div className="mt-[6.25rem] p-4 lg:px-8">{children}</div>
+        <div className="mt-[10rem] lg:mt-[6.25rem] p-4 lg:p-8">{children}</div>
       </div>
     </div>
   );
