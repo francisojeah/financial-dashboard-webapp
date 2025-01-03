@@ -27,7 +27,7 @@ const SettingsPage = () => {
   return (
     <DashboardLayout>
       <div className="bg-white rounded-[1.5625rem] mx-auto p-6">
-        <div className="border-b border-b[#F4F5F7] mb-8">
+        <div className="border-b border-b[#F4F5F7] md:text-base text-[0.8125rem] mb-8">
           <div className="flex justify-between md:justify-normal md:gap-14">
             <button
               onClick={() => setActiveTab("profile")}
@@ -78,9 +78,9 @@ const SettingsPage = () => {
         >
           {({ errors, setFieldValue }) => (
             <Form>
-              <div className="flex flex-col md:flex-row items-start gap-6">
+              <div className="flex flex-col md:flex-row items-start w-full gap-6">
                 {/* Profile Image */}
-                <div className="md:mx-8">
+                <div className="mx-auto md:mx-8">
                   <div className="relative">
                     <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-200">
                       <img
@@ -103,13 +103,13 @@ const SettingsPage = () => {
                   </div>
                 </div>
                 {/* Form Fields */}
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 w-full gap-6">
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Your Name
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="text"
                       onChange={(e) => setFieldValue("name", e.target.value)}
                       placeholder="Charlene Reed"
@@ -121,11 +121,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       User Name
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="text"
                       onChange={(e) =>
                         setFieldValue("userName", e.target.value)
@@ -139,11 +139,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Email
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="email"
                       onChange={(e) => setFieldValue("email", e.target.value)}
                       placeholder="charlenereed@gmail.com "
@@ -155,11 +155,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Password
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="password"
                       onChange={(e) =>
                         setFieldValue("password", e.target.value)
@@ -173,11 +173,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Date of Birth
                     </p>
                     <input
-                      className="flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className="flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="date"
                       onChange={(e) =>
                         setFieldValue("dateOfBirth", e.target.value)
@@ -191,11 +191,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Present Address
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="text"
                       onChange={(e) =>
                         setFieldValue("presentAddress", e.target.value)
@@ -209,11 +209,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Permanent Address
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="text"
                       onChange={(e) =>
                         setFieldValue("permanentAddress", e.target.value)
@@ -227,11 +227,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       City
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="text"
                       onChange={(e) => setFieldValue("city", e.target.value)}
                       placeholder="San Joe"
@@ -243,11 +243,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Postal Code
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="text"
                       onChange={(e) =>
                         setFieldValue("postalCode", e.target.value)
@@ -261,11 +261,11 @@ const SettingsPage = () => {
                     )}
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-black text-[1rem] leading-[1.25rem]">
+                    <p className="text-black text-[0.8125rem] md:text-[1rem] leading-[1.25rem]">
                       Country
                     </p>
                     <input
-                      className=" flex shadow-none text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
+                      className=" flex shadow-none text-[0.75rem] md:text-[0.9375rem] px-4 py-3 bg-transparent placeholder:text-custom-primary-2 text-custom-primary-2 rounded-[0.9375rem] border border-[#DFEAF2] self-stretch gap-2 items-center"
                       type="text"
                       onChange={(e) => setFieldValue("country", e.target.value)}
                       placeholder="USA"
@@ -280,10 +280,10 @@ const SettingsPage = () => {
               </div>
 
               {/* Save Button */}
-              <div className="flex justify-end mt-8">
+              <div className="flex md:justify-end mt-8">
                 <button
                   type="submit"
-                  className="bg-black text-white px-2 py-2 w-[11.875rem] h-[3.125rem] text-[1.125rem] leading-[1.375rem] rounded-[0.9375rem] hover:bg-gray-800 transition-colors"
+                  className="bg-black text-white px-2 py-2 w-full md:w-[11.875rem] h-[3.125rem] text-[0.9375rem] md:text-[1.125rem] leading-[1.375rem] rounded-[0.9375rem] hover:bg-gray-800 transition-colors"
                 >
                   Save
                 </button>
