@@ -1,6 +1,6 @@
 import Card from "./Card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+// import "swiper/css";
 
 const CardDetails = () => {
   return (
