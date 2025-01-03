@@ -55,7 +55,6 @@ const WeeklyActivityChart = ({ seriesData }: WeeklyActivityChartProps) => {
   const options: ApexOptions = {
     chart: {
       type: "bar" as const,
-
       height: 100,
       toolbar: {
         show: false,
@@ -129,11 +128,58 @@ const WeeklyActivityChart = ({ seriesData }: WeeklyActivityChartProps) => {
         },
       },
     },
+
+    responsive: [
+      // {
+      //   breakpoint: 768, // Tablets
+      //   options: {
+      //     plotOptions: {
+      //       bar: { columnWidth: "16px", borderRadius: 5 },
+      //     },
+      //     xaxis: {
+      //       labels: { style: { fontSize: "12px" } },
+      //     },
+      //     yaxis: {
+      //       labels: { style: { fontSize: "12px" } },
+      //     },
+      //     legend: {
+      //       fontSize: "12px",
+      //       markers: {
+      //         size: 5,
+      //       },
+      //     },
+      //     stroke: { width: 6 },
+      //   },
+      // },
+      {
+        breakpoint: 480, // Mobile
+        options: {
+          plotOptions: {
+            bar: { columnWidth: "10px", borderRadius: 4 },
+          },
+          xaxis: {
+            labels: { style: { fontSize: "11px" } },
+          },
+          yaxis: {
+            labels: { style: { fontSize: "11px" } },
+          },
+          legend: {
+            fontSize: "11px",
+            markers: {
+              size: 5,
+            },
+          },
+          stroke: { width: 3 },
+        },
+      },
+    ],
   };
 
   return (
     <div>
-      <p className="text-base md:text-[1.375rem] leading-[1.625rem] text-custom-primary-1 font-semibold mb-4">Weekly Activity</p>
+      <p className="text-base md:text-[1.375rem] leading-[1.625rem] text-custom-primary-1 font-semibold mb-4">
+        Weekly Activity
+      </p>
       <div className="w-full bg-white rounded-[1.5625rem] p-4 sm:p-8">
         <div className="h-[300px]">
           <ReactApexChart
