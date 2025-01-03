@@ -10,15 +10,7 @@ const BalanceHistoryChart = () => {
 
   useEffect(() => {
     // Sample Data (replace with real data as needed)
-    const categories = [
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-      "Jan",
-    ];
+    const categories = ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan"];
     const series = [100, 300, 780, 430, 550, 760, 600];
 
     setChartData({ categories, series });
@@ -27,7 +19,7 @@ const BalanceHistoryChart = () => {
   const options: ApexOptions = {
     chart: {
       type: "area",
-      height: 300,
+      height: 215,
       toolbar: {
         show: false,
       },
@@ -45,7 +37,7 @@ const BalanceHistoryChart = () => {
     stroke: {
       curve: "smooth",
       width: 3,
-      colors: ["#1814F3"]
+      colors: ["#1814F3"],
     },
     grid: {
       strokeDashArray: 2,
@@ -98,8 +90,61 @@ const BalanceHistoryChart = () => {
       },
     },
     colors: ["#2563EB"],
+
+
+    responsive: [
+      {
+        breakpoint: 768, 
+        options: {
+          chart: {
+            height: 250,
+          },
+          xaxis: {
+            labels: {
+              style: {
+                fontSize: "12px",
+              },
+            },
+          },
+          yaxis: {
+            labels: {
+              style: {
+                fontSize: "12px",
+              },
+            },
+          },
+          stroke: {
+            width: 2,
+          },
+        },
+      },
+      {
+        breakpoint: 480, 
+        options: {
+          chart: {
+            height: 200,
+          },
+          xaxis: {
+            labels: {
+              style: {
+                fontSize: "11px",
+              },
+            },
+          },
+          yaxis: {
+            labels: {
+              style: {
+                fontSize: "11px",
+              },
+            },
+          },
+          stroke: {
+            width: 1.5,
+          },
+        },
+      },
+    ],
   };
-  
 
   const series = [
     {
@@ -110,9 +155,11 @@ const BalanceHistoryChart = () => {
 
   return (
     <div>
-      <p className="text-base md:text-[1.375rem] leading-[1.625rem] text-custom-primary-1 font-semibold mb-4">Balance History</p>
+      <p className="text-base md:text-[1.375rem] leading-[1.625rem] text-custom-primary-1 font-semibold mb-4">
+        Balance History
+      </p>
       <div className="w-full bg-white rounded-[1.5625rem] sm:p-8">
-        <div className="h-[300px]">
+        <div className="md:h-[215px]">
           <ReactApexChart
             options={options}
             series={series}
