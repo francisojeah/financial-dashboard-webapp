@@ -14,17 +14,17 @@ const DashboardPage = () => {
   return (
     <DashboardLayout>
       <div className="flex flex-col gap-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[65%_30%] justify-between w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[65%_30%] justify-between gap-8 lg:gap-0 w-full">
           <CardDetails />
           <RecentTransactions />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[65%_30%] justify-between w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[65%_30%] justify-between gap-8 lg:gap-0 w-full">
           <WeeklyActivityChart seriesData={data} />
-          <ExpenseStatistics labels={["Rent", "Food", "Transportation", "Entertainment"]} percentages={[35, 25, 20, 20]}/>
+          <ExpenseStatistics labels={["Bill Expense", "Other", "Investment", "Entertainment"]} percentages={[ 15, 35, 20, 30]}/>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_55%] justify-between w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_55%] justify-between gap-8 lg:gap-0 w-full">
           <QuickTransfer />
           <BalanceHistoryChart />
         </div>
