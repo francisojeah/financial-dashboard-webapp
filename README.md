@@ -24,7 +24,7 @@ This is a financial dashboard application built with **Vite**, **TypeScript**, a
 
    ```bash
    git clone https://github.com/francisojeah/financial-dashboard-webapp.git
-   cd financial-dashboard-vite
+   cd financial-dashboard-webapp
    ```
 
 2. Install dependencies:
@@ -39,7 +39,7 @@ This is a financial dashboard application built with **Vite**, **TypeScript**, a
    npm run dev
    ```
 
-   Your app will be available at [http://localhost:3000](http://localhost:3000).
+   Your app will be available at [http://localhost:5173](http://localhost:5173).
 
 ## Project Structure
 
