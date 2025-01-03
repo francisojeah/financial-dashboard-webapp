@@ -10,6 +10,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        lato: ["Lato", "sans-serif"],
       },
       colors: {
         black: "#232323",
@@ -18,8 +19,8 @@ export default {
           danger: "#DD2121",
           primary: {
             1: "#343C6A",
-            2: "#134493",
-            3: "#ACBCCA",
+            2: "#718EBF",
+            3: "#F5F7FA",
           },
           secondary: {
             1: "#B5D2CB",
