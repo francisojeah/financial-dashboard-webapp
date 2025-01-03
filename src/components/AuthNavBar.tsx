@@ -33,7 +33,11 @@ const AuthNavBar = () => {
         <div className="flex justify-center items-center gap-8">
           <div className="relative w-full md:w-[15.9375rem]">
             <div className="absolute inset-y-0 left-0 pr-2 sm:pr-6 pl-4 flex items-center">
-              <img src="/assets/icons/search-icon.svg" className="w-auto h-5" />
+              <img
+                src="/assets/icons/search-icon.svg"
+                alt="search icon"
+                className="w-auto h-5"
+              />
             </div>
             <input
               className="px-4 py-4 w-full h-12 pl-12 flex shadow-none text-sm bg-custom-primary-3 rounded-full self-stretch gap-2 items-center focus:outline-none text-[#8BA3CB]"
