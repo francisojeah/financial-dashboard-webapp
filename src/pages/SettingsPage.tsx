@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Formik, Form, Field } from "formik";
+import { useState } from "react";
+import { Formik, Form } from "formik";
 import { ProfileSettingsSchema } from "../utils/Yup";
 import DashboardLayout from "../components/DashboardLayout";
 
